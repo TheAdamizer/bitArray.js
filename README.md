@@ -32,8 +32,16 @@ the flipOn method and pass in the desired index you would like to set to 1 (true
 ba.flipOn(50);
 ```
 
+To turn a bit off, whether or not it is off or on, simply use the flipOff method
+(and be sure to apologize to the bit for your rude behavior after).  It needs only
+the desired index as a parameter.
+
+```javascript
+ba.flipOff(50);
+```
+
 The bit array has a method toggle, which will turn on a bit that's off, or turn off
-a bit that's on.  It takes one parameter, which is the index the developer wouldl like
+a bit that's on.  It takes one parameter, which is the index the developer would like
 to toggle.
 
 ```javascript
