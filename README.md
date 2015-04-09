@@ -1,17 +1,17 @@
 # bitArray.js
-A simple, well commented, pure Javascript implementation of a bit array for storing and manipulating boolean values. 
+A simple, well commented, pure Javascript implementation of a bit array for storing and manipulating boolean values.
 
 ### Why should I use this?
 
 This library is being developed in order to provide javascipt developers with an intuitue, simple API to store a large
 number of boolean (true/false) values with minimal overhead.  Accessing values and changing them are all constant in their
 time complexity (excluding the 'trueBits' and 'percentTrue' methods).  Under the hood, this library uses bitwise operations on
-unsigned 8 bit integers, so it's memory and processor consumtion is at an absolute minimum.  
+unsigned 8 bit integers, so it's memory and processor consumtion is at an absolute minimum.
 
 ### What are some usage cases?
 
-Originally this library was developed to assist with a learning repo, 
-[LearnBloomFilters](https://github.com/TheAdamizer/LearnBloomFilter), which is a testing driven repo to help javascript 
+Originally this library was developed to assist with a learning repo,
+[LearnBloomFilters](https://github.com/TheAdamizer/LearnBloomFilter), which is a testing driven repo to help javascript
 developers create a bloom filter implementation.  To implement a bloom filter well, the developer requries a high performance
 way to manipulate a large array of boolean values, so this library was an answer to that requirement.  Although it excels in
 this function, it is suitable to act as a boolean array where vanilla javascript is the required platform.
@@ -32,6 +32,14 @@ the flipOn method and pass in the desired index you would like to set to 1 (true
 ba.flipOn(50);
 ```
 
+The bit array has a method toggle, which will turn on a bit that's off, or turn off
+a bit that's on.  It takes one parameter, which is the index the developer wouldl like
+to toggle.
+
+```javascript
+ba.toggle(50);
+```
+
 If you would like to determine the value of a bit at a given index, simply call the check method on the BitArray object and
 pass in the index you are curious about.
 
@@ -42,7 +50,7 @@ ba.check(75);
 \\ returns false;
 ```
 
-The BitArray object also has a method for determining the amount of bits that are true in the array relative to the total 
+The BitArray object also has a method for determining the amount of bits that are true in the array relative to the total
 length of the array.  This method is called percentTrue.
 
 ```javascript
