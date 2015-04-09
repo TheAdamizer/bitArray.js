@@ -59,6 +59,18 @@ BitArray.prototype.flipOn = function(idx) {
   this._uint8[index] = this._uint8[index] | mask;
 };
 
+BitArray.prototype.flipOff = function(idx) {
+  //Use calculateIndex to determine the desired bitwise index.
+  var index = this.calculateIndex(idx);
+
+  //Use generate mask, then subtract it from 255  to make a mask to flip
+  //off the bit.
+  var mask = 255 - this.generateMask(idx);
+
+  //Now and the current integer with the generated mask to flipp off the bit.
+  this._uint8[index] = this._uint8[index] & mask;
+};
+
 BitArray.prototype.toggle = function(idx) {
   //Use calculateIndex to determine the desired bitwise index.
   var index = this.calculateIndex(idx);
