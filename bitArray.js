@@ -1,7 +1,7 @@
 /*
   Author: Adam Van Antwerp
   Date Created: 3/31/2015
-  Last Modification: 3/31/2015
+  Last Modification: 4/9/2015
   Description: This implements a simple BitArray class for doing bitwise
     storing and manipulation.
 */
